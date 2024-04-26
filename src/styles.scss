@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/variables.scss";
+
+* {
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-size: 16px;
+    font-weight: 400;
+    scrollbar-color: grey transparent;
+    scrollbar-width: thin;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./assets/images/hero_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: $main-dark;
+}

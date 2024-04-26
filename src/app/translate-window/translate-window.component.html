@@ -1,0 +1,34 @@
+<section class="translate-window">
+  <div class="heading">
+    <ng-container *ngFor="let lng of languages">
+      <span
+        class="lang"
+        *ngIf="!inputType && lng.code == 'Autodetect' ? false : true"
+        [class.selected]="
+          inputType ? lng.code === translateFrom : lng.code === translateTo
+        "
+        (click)="switchLanguage(lng.code)"
+        >{{ lng.label }}</span
+      >
+    </ng-container>
+  </div>
+  <div class="text-container">
+    <div class="input" *ngIf="inputType; else output">
+      <textarea maxlength="500" [(ngModel)]="textToTranslate"></textarea>
+      <span class="used-characters">{{ textToTranslate.length }}/500</span>
+    </div>
+    <ng-template #output>
+      <div class="output">{{ translatedText }}</div>
+    </ng-template>
+  </div>
+  <div class="footer">
+    <div class="control-buttons">
+      <button *ngFor="let btn of controlButtons" (click)="btn.command()">
+        <img [src]="iconPath + btn.icon" [alt]="btn.alt" />
+      </button>
+    </div>
+    <button class="translate-btn" *ngIf="inputType" (click)="translate()">
+      <img [src]="iconPath + 'Sort_alfa.svg'" alt="Translate icon" /> <span>Translate</span>
+    </button>
+  </div>
+</section>
