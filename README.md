@@ -1,6 +1,15 @@
 # TranslateApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.  
+It uses mymemory.translated.net API for translations.  
+
+[EN]  
+A 'pet-project' app that allows users to translate text between English, French, Spanish, or any detected language.  
+It also allows users to listen to the text and copy it.  
+
+[PL]  
+Aplikacja typu 'pet-project', która pozwala użytkownikom tłumaczyć tekst pomiędzy językiem angielskim, francuskim, hiszpańskim lub dowolnym wykrytym językiem.  
+Pozwala również na odsłuchanie tekstu oraz jego skopiowanie.
 
 ## Development server
 
